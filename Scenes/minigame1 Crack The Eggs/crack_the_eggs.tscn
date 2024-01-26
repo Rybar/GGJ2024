@@ -1,0 +1,22 @@
+[gd_scene load_steps=2 format=3 uid="uid://dydlpgxy7c2ku"]
+
+[ext_resource type="Script" path="res://Scenes/minigame1 Crack The Eggs/crack_the_eggs.gd" id="1_4fwsw"]
+
+[node name="crack_the_eggs" type="Node2D"]
+script = ExtResource("1_4fwsw")
+
+[node name="Label" type="Label" parent="."]
+offset_left = 34.0
+offset_top = 18.0
+offset_right = 167.0
+offset_bottom = 41.0
+text = "Crack The Eggs
+"
+
+[node name="nextSceneButton" type="Button" parent="."]
+offset_left = 625.0
+offset_top = 345.0
+offset_right = 671.0
+offset_bottom = 376.0
+text = "Next
+"

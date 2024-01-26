@@ -6,7 +6,7 @@
 
 **Genre:** 2D Casual, platformer
 
-**Target Platform:** PC and Mobile
+**Target Platform:** PC 
 
 **Theme and Setting:** The game is set in the 1980s, featuring a road trip in an old RV across the United States.
 
@@ -39,13 +39,13 @@ British Celebrity (Excitedly, with a thick brit accent): "Hello, hello! This is 
 
 **Granny (squinting, a bit hard of hearing):** "What'd he say, dear? 'Make Meatloaf'? Is that it?"
 
-**Protagonist (still confused but going along):** "Um, I guess so, Granny. 'Make Meatloaf'...? I mean, I’ve never heard of such a contest, but..."
+**Protagonist (still confused but going along):** "Um, I guess so, Gramma. 'Make Meatloaf'...? I mean, I ain' never heard of such a contest, but..."
 
 **Granny (excitedly):** "Oh, that's wonderful! You can make my famous family recipe meatloaf! It's been a winner at every church potluck!"
 
-**Protagonist (half-heartedly):** "Yeah, Granny, but the only contests I’ve ever done are eating contests and, well, making things to eat contests."
+**Protagonist (half-heartedly):** "Yeah,I dunno Gramnma.."
 
-**Granny (beaming with pride):** "Then it's perfect! You were born for this, love! My meatloaf recipe in your hands? Unbeatable!"
+**Granny (beaming with pride) interrupting:** "Tt's perfect! You were born for this, love! My meatloaf recipe in your hands? Unbeatable!"
 
 **Protagonist (realizing they can't back out now):** "Well, I guess we’re doing this. But Granny, the contest is 2000 miles away!"
 
@@ -58,23 +58,56 @@ British Celebrity (Excitedly, with a thick brit accent): "Hello, hello! This is 
 - **Setting:** Inside a moving RV with a makeshift kitchen.
 - **Objective:** Prepare the perfect meatloaf under challenging conditions.
 
-### Mini Games
+## Mini Games
 
-1. **Crack Eggs:** Time your actions to crack eggs into a bowl without getting shells in, while the RV is in motion.
-2. **Mix Meatloaf:** Use ill-fitting gloves to mix ingredients, managing a cleanliness meter.
-3. **Shape Meatloaf:** Form meatloaf into a specified shape, contending with the RV's movements.
-4. **Cook Meatloaf:** Use a faulty toaster oven, handling unpredictable timer issues and power disconnections.
-5. **Sauce the Meatloaf:** Mix and apply sauce, dealing with road bumps that affect precision.
+### Crack eggs game
+- use analog sticks and triggers to pick up eggs from carton. 
+- triggers must be held halfway down to avoid crushing eggs
+- both hands must be pinching (correct position and trigger held down) to crack egg without dropping shells. 
+- After cracking, pinch must be maintained and positions moved apart over bowl. Moving towards each other results in crushed shells falling in
+- Letting go of a pinch results in shells falling
+- Pinching too hard at any point results in crushed eggshells falling
+- Goal: eggs in the bowl, no shells. 
 
-### Scoring and Feedback
+### Mix the loaf game
+- poorly fit gloves mean another balancing game.  Move the analog sticks to push your hands into the goop and turn it over.
+- Pushing your hand in too far means your glove starts to fall off. Pinch (pull trigger) to keep your glove on.
+- Losing a glove means half your points for this game lost. 
+- Thoroughly mix the meatloaf in the time allotted 
+- Mix just right for perfect score 
+- Penalty for under mixed or over mixed
 
-- Each mini-game contributes to the overall quality of the day's meatloaf.
-- Daily feedback from Grandma provides humorous and constructive comments.
-- Final outcome: Upon realizing the contest's true nature, pivot to selling meatloaf, with success determined by the week's performance.
+### Shape the meatloaf game
+- a border representing the desired shape appears. 
+- Push the pink mass in around the edges to make it match the shape of the border
+- Too far pushed can’t be undone
+- Pushing is done by positioning your hand at edge of meat mass and pulling the trigger, then moving the analog stick in the desired push direction.  Speed is determined by trigger pressure.  
+- Goal: perfect shape. Scored by over/under and percentage shape filled.  
+
+### Cook the meatloaf game
+- grandmas toaster oven requires you to hold the plug into the wall, and bumps in the road reset the temperature and the timer.  Watch and Correct the timer and temp when granny hits a bump in the road. 
+- The correctness of your corrections and number of times you lose power affect the score of this round. 
+
+### Sauce the meatloaf game
+- use one hand to squirt sauce and the other to evenly spread the sauce over the outside of the meatloaf. 
+- Sauce is prone to dripping, and the game is timed
+- Score is determined by number of drips and coverage percentage when timer goes off. 
+
+### Daily results scene, grandma taste test
+- grandma tastes the meatloaf and gives you a quality score based on your scores in the mini games.  
+
+## Finale
+
+### End of week game: makeshift food truck
+- you sell slices of meatloaf from the meatloaves you made all week for a set period of time.
+- demand is determined by meatloaf scores.  
+- Before the round starts, you have the chance to rearrange the order you sell your meatloaf slices in (so you can put your best meatloaf in the middle, beginning or end).
+- Meatloaf counter has a costumer, you grab a slice and bring it to the window.  
+- Score is determined by quality of meatloaf, number of customers served, and quality of the meatloaf chosen to be on the selling counter 
 
 ## Art and Audio
 
-### Visual Style
+### Visual Style and Design Notes
 
 - **2D hand drawn Art:** exaggerated characters and environments, doodles fine
 - **RV Interior:** Detailed, interactive kitchen area with period-appropriate appliances and decor. A cutaway 2D side-on view of the RV rolling down the road. 
@@ -82,14 +115,14 @@ British Celebrity (Excitedly, with a thick brit accent): "Hello, hello! This is 
 
 ### Audio
 
-- **Soundtrack:** 80s-style synth music, upbeat and whimsical.
+- **Soundtrack:** 80s synth pop music, upbeat and whimsical.
 - **Sound Effects:** RV movements, RV motor sounds, kitchen clanks, eggs cracking, gross moist squelches, old oven timers
 - **Voice Acting:** British celebrity with a thick accent for the initial message; Grandma's voice is naive, warm and encouraging.
 
 ## Technical Requirements
 
-- **Platform Compatibility:** Optimized for both PC and mobile play.
-- **Control Scheme:** Simple, intuitive controls for mini-games, suitable for touchscreens and mouse input, as well as gamepad input with analog sticks
+- **Platform Compatibility:** Optimized for PC with gamepad play
+- **Control Scheme:** Simple, intuitive controls for mini-games, gamepad input with analog sticks
 
 
 

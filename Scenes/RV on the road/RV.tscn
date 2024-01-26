@@ -1,0 +1,21 @@
+[gd_scene load_steps=2 format=3 uid="uid://cduy7iibij3ft"]
+
+[ext_resource type="Script" path="res://Scenes/RV on the road/RV.gd" id="1_pgvpk"]
+
+[node name="Rv" type="Node2D"]
+script = ExtResource("1_pgvpk")
+
+[node name="Label" type="Label" parent="."]
+offset_left = 34.0
+offset_top = 18.0
+offset_right = 167.0
+offset_bottom = 41.0
+text = "RV on road scene
+"
+
+[node name="nextSceneButton" type="Button" parent="."]
+offset_left = 625.0
+offset_top = 345.0
+offset_right = 671.0
+offset_bottom = 376.0
+text = "Next"

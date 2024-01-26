@@ -1,0 +1,22 @@
+[gd_scene load_steps=2 format=3 uid="uid://c0a1gw2ggwsuo"]
+
+[ext_resource type="Script" path="res://Scenes/minigame2 Mix The Meatloaf/mix_the_meatloaf.gd" id="1_m23ky"]
+
+[node name="mix_the_meatloaf" type="Node2D"]
+script = ExtResource("1_m23ky")
+
+[node name="Label" type="Label" parent="."]
+offset_left = 34.0
+offset_top = 18.0
+offset_right = 167.0
+offset_bottom = 41.0
+text = "mix the meatloaf
+"
+
+[node name="nextSceneButton" type="Button" parent="."]
+offset_left = 625.0
+offset_top = 345.0
+offset_right = 671.0
+offset_bottom = 376.0
+text = "Next
+"
