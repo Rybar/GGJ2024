@@ -1,9 +1,40 @@
-[gd_scene load_steps=2 format=3 uid="uid://dydlpgxy7c2ku"]
+[gd_scene load_steps=12 format=3 uid="uid://dydlpgxy7c2ku"]
 
 [ext_resource type="Script" path="res://Scenes/minigame1 Crack The Eggs/crack_the_eggs.gd" id="1_4fwsw"]
+[ext_resource type="Texture2D" uid="uid://d0iw13p2udnqb" path="res://raw_assets/Make_meatloaf/Egg_cracking_scene/Countertop.PNG" id="2_yugf1"]
+[ext_resource type="Texture2D" uid="uid://cud65qbk6qn08" path="res://raw_assets/Make_meatloaf/Egg_cracking_scene/Meatloaf.PNG" id="3_fbq0o"]
+[ext_resource type="Texture2D" uid="uid://kiky185pe5l4" path="res://raw_assets/Make_meatloaf/Egg_cracking_scene/Egg.PNG" id="4_akvyy"]
+[ext_resource type="Texture2D" uid="uid://d0ddukeg01sxn" path="res://raw_assets/Make_meatloaf/Egg_cracking_scene/Egg_holder.PNG" id="5_6xpn1"]
+[ext_resource type="Texture2D" uid="uid://btafi0yhscwbv" path="res://raw_assets/Make_meatloaf/Egg_cracking_scene/Bowl.PNG" id="6_2owae"]
+[ext_resource type="Texture2D" uid="uid://dsr14d11cgf04" path="res://raw_assets/Make_meatloaf/Egg_cracking_scene/Eggshell_left.PNG" id="7_yqyrw"]
+[ext_resource type="Texture2D" uid="uid://ctjmc8b0duxon" path="res://raw_assets/Make_meatloaf/Egg_cracking_scene/Eggshell_right.PNG" id="8_ef57j"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_wirsw"]
+size = Vector2(1918, 192)
+
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_h688a"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_56n4p"]
+radius = 45.0
+height = 160.0
 
 [node name="crack_the_eggs" type="Node2D"]
 script = ExtResource("1_4fwsw")
+
+[node name="Countertop-bg" type="Sprite2D" parent="."]
+position = Vector2(960, 541)
+texture = ExtResource("2_yugf1")
+
+[node name="TimerShow" type="Label" parent="."]
+offset_left = 323.0
+offset_top = 24.0
+offset_right = 456.0
+offset_bottom = 47.0
+text = "Time Remaining: "
+
+[node name="minigame_timer" type="Timer" parent="TimerShow"]
+wait_time = 10.0
+autostart = true
 
 [node name="Label" type="Label" parent="."]
 offset_left = 34.0
@@ -14,9 +45,66 @@ text = "Crack The Eggs
 "
 
 [node name="nextSceneButton" type="Button" parent="."]
-offset_left = 625.0
-offset_top = 345.0
-offset_right = 671.0
-offset_bottom = 376.0
+offset_left = 171.0
+offset_top = 17.0
+offset_right = 217.0
+offset_bottom = 48.0
 text = "Next
 "
+
+[node name="Egg2" type="Sprite2D" parent="."]
+position = Vector2(249, 756)
+texture = ExtResource("4_akvyy")
+
+[node name="Egg3" type="Sprite2D" parent="."]
+position = Vector2(498, 761)
+texture = ExtResource("4_akvyy")
+
+[node name="EggHolder" type="Sprite2D" parent="."]
+position = Vector2(416, 758)
+texture = ExtResource("5_6xpn1")
+
+[node name="Bowl" type="RigidBody2D" parent="."]
+position = Vector2(1353, 697)
+mass = 10.0
+
+[node name="Meatloaf" type="Sprite2D" parent="Bowl"]
+position = Vector2(-19, 44)
+texture = ExtResource("3_fbq0o")
+
+[node name="Bowl-gfx" type="Sprite2D" parent="Bowl"]
+position = Vector2(14, -47)
+texture = ExtResource("6_2owae")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Bowl"]
+polygon = PackedVector2Array(-389, -180, -373, -181, -289, 92, 218, 96, 358, -183, 397, -184, 238, 140, -322, 137)
+
+[node name="EggshellLeft" type="Sprite2D" parent="."]
+position = Vector2(587, 239)
+texture = ExtResource("7_yqyrw")
+
+[node name="EggshellRight" type="Sprite2D" parent="."]
+position = Vector2(710, 224)
+texture = ExtResource("8_ef57j")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+position = Vector2(919, 997)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(45, -31)
+shape = SubResource("RectangleShape2D_wirsw")
+
+[node name="Egg" type="RigidBody2D" parent="."]
+position = Vector2(1095, 237)
+rotation = -1.32155
+mass = 0.1
+physics_material_override = SubResource("PhysicsMaterial_h688a")
+max_contacts_reported = 3
+
+[node name="egg-gfx" type="Sprite2D" parent="Egg"]
+position = Vector2(-1, 8)
+texture = ExtResource("4_akvyy")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Egg"]
+position = Vector2(-1, 7)
+shape = SubResource("CapsuleShape2D_56n4p")

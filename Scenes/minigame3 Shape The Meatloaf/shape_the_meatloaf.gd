@@ -9,7 +9,7 @@ func _ready():
 	minigame_timer.connect("timeout", _on_minigame_timer_timeout)
 
 func _on_next_scene_button_pressed():
-	SceneSwitcher.switch_scene("res://Scenes/minigame5 Sauce The Meatloaf/sauce_the_meatloaf.tscn")
+	SceneSwitcher.switch_scene("res://Scenes/minigame4 Cook The Meatloaf/cook_the_meatloaf.tscn")
 
 
 func _on_minigame_timer_timeout():

@@ -1,11 +1,33 @@
-[gd_scene format=3 uid="uid://bwgpakew4lbul"]
+[gd_scene load_steps=2 format=3 uid="uid://bwgpakew4lbul"]
 
-[node name="Rv" type="Node2D"]
+[ext_resource type="Script" path="res://Scenes/minigame3 Shape The Meatloaf/shape_the_meatloaf.gd" id="1_s21mu"]
+
+[node name="shape_the_meatloaf" type="Node2D"]
+script = ExtResource("1_s21mu")
 
 [node name="Label" type="Label" parent="."]
 offset_left = 34.0
 offset_top = 18.0
 offset_right = 167.0
 offset_bottom = 41.0
-text = "RV on road scene
+text = "Shape The Meatloaf
+"
+
+[node name="TimerShow" type="Label" parent="."]
+offset_left = 323.0
+offset_top = 24.0
+offset_right = 456.0
+offset_bottom = 47.0
+text = "Time Remaining: "
+
+[node name="minigame_timer" type="Timer" parent="TimerShow"]
+wait_time = 10.0
+autostart = true
+
+[node name="nextSceneButton" type="Button" parent="."]
+offset_left = 670.0
+offset_top = 369.0
+offset_right = 716.0
+offset_bottom = 400.0
+text = "Next
 "

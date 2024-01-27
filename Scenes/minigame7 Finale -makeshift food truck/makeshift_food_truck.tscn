@@ -5,6 +5,17 @@
 [node name="makeshift_food_truck" type="Node2D"]
 script = ExtResource("1_t2hic")
 
+[node name="TimerShow" type="Label" parent="."]
+offset_left = 334.0
+offset_top = 41.0
+offset_right = 467.0
+offset_bottom = 64.0
+text = "Time Remaining: "
+
+[node name="minigame_timer" type="Timer" parent="TimerShow"]
+wait_time = 10.0
+autostart = true
+
 [node name="Label" type="Label" parent="."]
 offset_left = 34.0
 offset_top = 18.0

@@ -1,0 +1,149 @@
+[gd_scene load_steps=2 format=3 uid="uid://c0p80yf6alct5"]
+
+[ext_resource type="Script" path="res://Scenes/X final results/final_results.gd" id="1_4i0yk"]
+
+[node name="final_results" type="Node2D"]
+script = ExtResource("1_4i0yk")
+
+[node name="Label" type="Label" parent="."]
+offset_left = 34.0
+offset_top = 18.0
+offset_right = 167.0
+offset_bottom = 41.0
+text = "Results
+"
+
+[node name="Meatloaf Scores2" type="Node2D" parent="."]
+
+[node name="Meatloaf Scores" type="Label" parent="Meatloaf Scores2"]
+offset_left = 392.0
+offset_top = 55.0
+offset_right = 525.0
+offset_bottom = 78.0
+text = "Meatloaf Scores
+"
+horizontal_alignment = 1
+
+[node name="Saturday Meatloaf Sales" type="Label" parent="Meatloaf Scores2"]
+offset_left = 359.0
+offset_top = 237.0
+offset_right = 546.0
+offset_bottom = 260.0
+text = "Saturday Meatloaf Sales
+"
+horizontal_alignment = 1
+
+[node name="Monday" type="Label" parent="Meatloaf Scores2"]
+offset_left = 72.0
+offset_top = 113.0
+offset_right = 205.0
+offset_bottom = 136.0
+text = "Monday
+"
+horizontal_alignment = 1
+
+[node name="Tuesday" type="Label" parent="Meatloaf Scores2"]
+offset_left = 238.0
+offset_top = 113.0
+offset_right = 371.0
+offset_bottom = 136.0
+text = "Tuesday
+"
+horizontal_alignment = 1
+
+[node name="Wednesday" type="Label" parent="Meatloaf Scores2"]
+offset_left = 392.0
+offset_top = 113.0
+offset_right = 525.0
+offset_bottom = 136.0
+text = "Wednesday
+"
+horizontal_alignment = 1
+
+[node name="Thursday" type="Label" parent="Meatloaf Scores2"]
+offset_left = 575.0
+offset_top = 113.0
+offset_right = 708.0
+offset_bottom = 136.0
+text = "Thursday
+"
+horizontal_alignment = 1
+
+[node name="Friday" type="Label" parent="Meatloaf Scores2"]
+offset_left = 740.0
+offset_top = 113.0
+offset_right = 873.0
+offset_bottom = 136.0
+text = "Friday
+"
+horizontal_alignment = 1
+
+[node name="Score 1" type="Label" parent="Meatloaf Scores2"]
+offset_left = 72.0
+offset_top = 163.0
+offset_right = 205.0
+offset_bottom = 186.0
+text = "00
+"
+horizontal_alignment = 1
+
+[node name="Score 2" type="Label" parent="Meatloaf Scores2"]
+offset_left = 238.0
+offset_top = 163.0
+offset_right = 371.0
+offset_bottom = 186.0
+text = "00
+"
+horizontal_alignment = 1
+
+[node name="Score 3" type="Label" parent="Meatloaf Scores2"]
+offset_left = 392.0
+offset_top = 163.0
+offset_right = 525.0
+offset_bottom = 186.0
+text = "00
+"
+horizontal_alignment = 1
+
+[node name="Score 4" type="Label" parent="Meatloaf Scores2"]
+offset_left = 575.0
+offset_top = 163.0
+offset_right = 708.0
+offset_bottom = 186.0
+text = "00
+"
+horizontal_alignment = 1
+
+[node name="Score 5" type="Label" parent="Meatloaf Scores2"]
+offset_left = 740.0
+offset_top = 163.0
+offset_right = 873.0
+offset_bottom = 186.0
+text = "00
+"
+horizontal_alignment = 1
+
+[node name="Score 6" type="Label" parent="Meatloaf Scores2"]
+offset_left = 392.0
+offset_top = 274.0
+offset_right = 525.0
+offset_bottom = 297.0
+text = "00
+"
+horizontal_alignment = 1
+
+[node name="back_to_title_button" type="Button" parent="."]
+offset_left = 144.0
+offset_top = 433.0
+offset_right = 250.0
+offset_bottom = 464.0
+text = "Back To Title
+"
+
+[node name="play_again_button" type="Button" parent="."]
+offset_left = 666.0
+offset_top = 433.0
+offset_right = 772.0
+offset_bottom = 464.0
+text = "Play Again
+"

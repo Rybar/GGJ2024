@@ -21,3 +21,14 @@ offset_right = 671.0
 offset_bottom = 376.0
 text = "Next
 "
+
+[node name="TimerShow" type="Label" parent="."]
+offset_left = 323.0
+offset_top = 24.0
+offset_right = 456.0
+offset_bottom = 47.0
+text = "Time Remaining: "
+
+[node name="minigame_timer" type="Timer" parent="TimerShow"]
+wait_time = 10.0
+autostart = true

@@ -1,0 +1,13 @@
+[gd_scene load_steps=2 format=3 uid="uid://cd080btqo0u1a"]
+
+[ext_resource type="Script" path="res://Scenes/00 Intro/Intro.gd" id="1_r1e0g"]
+
+[node name="Intro" type="Node2D"]
+script = ExtResource("1_r1e0g")
+
+[node name="nextSceneButton" type="Button" parent="."]
+offset_left = 1726.0
+offset_top = 960.0
+offset_right = 1853.0
+offset_bottom = 1029.0
+text = "Skip Intro"
