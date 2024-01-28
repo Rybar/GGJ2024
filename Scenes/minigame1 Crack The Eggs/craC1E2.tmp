@@ -1,17 +1,79 @@
-[gd_scene load_steps=16 format=3 uid="uid://dydlpgxy7c2ku"]
+[gd_scene load_steps=19 format=3 uid="uid://dydlpgxy7c2ku"]
 
 [ext_resource type="Script" path="res://Scenes/minigame1 Crack The Eggs/crack_the_eggs.gd" id="1_4fwsw"]
 [ext_resource type="Texture2D" uid="uid://d0iw13p2udnqb" path="res://raw_assets/Make_meatloaf/Egg_cracking_scene/Countertop.PNG" id="2_yugf1"]
 [ext_resource type="Texture2D" uid="uid://cud65qbk6qn08" path="res://raw_assets/Make_meatloaf/Egg_cracking_scene/Meatloaf.PNG" id="3_fbq0o"]
-[ext_resource type="PackedScene" uid="uid://bg1ps38ff5e7o" path="res://Scenes/left_hand.tscn" id="3_ugy6h"]
 [ext_resource type="Texture2D" uid="uid://kiky185pe5l4" path="res://raw_assets/Make_meatloaf/Egg_cracking_scene/Egg.PNG" id="4_akvyy"]
-[ext_resource type="PackedScene" uid="uid://b04hvjadypvvh" path="res://Scenes/right_hand.tscn" id="4_dxbad"]
 [ext_resource type="Texture2D" uid="uid://d0ddukeg01sxn" path="res://raw_assets/Make_meatloaf/Egg_cracking_scene/Egg_holder.PNG" id="5_6xpn1"]
 [ext_resource type="Texture2D" uid="uid://btafi0yhscwbv" path="res://raw_assets/Make_meatloaf/Egg_cracking_scene/Bowl.PNG" id="6_2owae"]
 [ext_resource type="Texture2D" uid="uid://dsr14d11cgf04" path="res://raw_assets/Make_meatloaf/Egg_cracking_scene/Eggshell_left.PNG" id="7_yqyrw"]
 [ext_resource type="Texture2D" uid="uid://ctjmc8b0duxon" path="res://raw_assets/Make_meatloaf/Egg_cracking_scene/Eggshell_right.PNG" id="8_ef57j"]
 [ext_resource type="Script" path="res://Scenes/minigame1 Crack The Eggs/Egg.gd" id="9_i0xya"]
+[ext_resource type="Script" path="res://Scenes/minigame1 Crack The Eggs/Hand.gd" id="9_uxwco"]
 [ext_resource type="Script" path="res://Scenes/minigame1 Crack The Eggs/Debug.gd" id="11_acr4r"]
+
+[sub_resource type="Animation" id="Animation_46rbk"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("thumb:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.157423]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("fingers:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [-0.354991]
+}
+
+[sub_resource type="Animation" id="Animation_x8uxa"]
+resource_name = "close_hand"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("thumb:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0.157423, -0.982935]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("fingers:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [-0.354991, 0.490891]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_5rrqv"]
+_data = {
+"RESET": SubResource("Animation_46rbk"),
+"close_hand": SubResource("Animation_x8uxa")
+}
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_orc40"]
+radius = 31.0161
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_wirsw"]
 size = Vector2(1918, 192)
@@ -48,11 +110,47 @@ offset_bottom = 48.0
 text = "Next
 "
 
-[node name="left_hand" parent="." instance=ExtResource("3_ugy6h")]
-position = Vector2(356, 115)
+[node name="Hand" type="Node2D" parent="."]
+z_index = 1
+position = Vector2(291, 160)
+script = ExtResource("9_uxwco")
 
-[node name="right_hand" parent="." instance=ExtResource("4_dxbad")]
-position = Vector2(1372, 119)
+[node name="palm_wrist" type="Polygon2D" parent="Hand"]
+position = Vector2(-1, 0)
+color = Color(0.831373, 0.572549, 0.45098, 1)
+polygon = PackedVector2Array(-24, -24, 32, -36, 56, 16, 46, 44, -22, 29)
+
+[node name="Close_Hand_Animation" type="AnimationPlayer" parent="Hand"]
+libraries = {
+"": SubResource("AnimationLibrary_5rrqv")
+}
+
+[node name="fingers" type="Polygon2D" parent="Hand"]
+position = Vector2(13, 16)
+rotation = -0.354991
+color = Color(0.831373, 0.572549, 0.45098, 1)
+offset = Vector2(-13, -16)
+polygon = PackedVector2Array(13, -10, 55, 28, 74, 79, 73, 158, 56, 157, 50, 80, 25, 41, -21, 21)
+
+[node name="thumb" type="Polygon2D" parent="Hand"]
+position = Vector2(-1, 22)
+rotation = 0.157423
+color = Color(0.831373, 0.572549, 0.45098, 1)
+offset = Vector2(-5, -27)
+polygon = PackedVector2Array(24, 17, 18, 40, -18, 49, -34, 75, -51, 83, -61, 70, -41, 36, -15, 14)
+
+[node name="squeeze_amount" type="Label" parent="Hand"]
+offset_left = 43.0
+offset_top = -52.0
+offset_right = 83.0
+offset_bottom = -29.0
+text = "0.00"
+
+[node name="left_grabber" type="Area2D" parent="Hand"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Hand/left_grabber"]
+position = Vector2(14, 96)
+shape = SubResource("CircleShape2D_orc40")
 
 [node name="Physics_Bodies" type="Node" parent="."]
 
@@ -95,7 +193,7 @@ position = Vector2(45, -31)
 shape = SubResource("RectangleShape2D_wirsw")
 
 [node name="Egg" type="RigidBody2D" parent="Physics_Bodies"]
-position = Vector2(618, 522)
+position = Vector2(259, 733)
 rotation = -0.0103299
 input_pickable = true
 mass = 0.1
@@ -114,7 +212,7 @@ shape = SubResource("CapsuleShape2D_56n4p")
 [node name="egg_area" type="Area2D" parent="Physics_Bodies/Egg"]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Physics_Bodies/Egg/egg_area"]
-position = Vector2(-2.06187, 5.97904)
+position = Vector2(-3.25808, 24.9677)
 shape = SubResource("CapsuleShape2D_56n4p")
 
 [node name="EggHolder" type="Sprite2D" parent="Physics_Bodies"]

@@ -42,15 +42,13 @@ polygon = PackedVector2Array(235, 1046, 174, 1029, 129, 957, 263, 480, 301, 428,
 
 [node name="left_hand" parent="." instance=ExtResource("2_xwo4i")]
 position = Vector2(407, 139)
-scale = Vector2(-1.5, 1.5)
-speed = 600
-push_force = 100.0
+speed = 100
+push_force = 20.0
 
 [node name="right_hand" parent="." instance=ExtResource("3_cwxdm")]
 position = Vector2(1467, 139)
-scale = Vector2(1.5, 1.5)
-speed = 600
-push_force = 100.0
+speed = 100
+push_force = 20.0
 
 [node name="Line2D" type="Line2D" parent="."]
 points = PackedVector2Array(341, 485, 377, 429, 438, 402, 1477, 422, 1549, 456, 1655, 817, 1637, 889, 1569, 925, 310, 925, 265, 900, 225, 851)
@@ -59,5 +57,3 @@ width = 33.335
 default_color = Color(1, 1, 0, 1)
 
 [node name="meat_bit" parent="." instance=ExtResource("4_bi0vx")]
-
-[node name="meat_bit container" type="Node" parent="."]

@@ -1,0 +1,131 @@
+[gd_scene load_steps=8 format=3 uid="uid://bg1ps38ff5e7o"]
+
+[ext_resource type="Script" path="res://Scenes/minigame1 Crack The Eggs/Left_Hand.gd" id="1_pgiyp"]
+
+[sub_resource type="Animation" id="Animation_46rbk"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("thumb:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.157423]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("fingers:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [-0.354991]
+}
+
+[sub_resource type="Animation" id="Animation_x8uxa"]
+resource_name = "close_hand"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("thumb:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0.157423, -0.982935]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("fingers:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [-0.354991, 0.490891]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_5rrqv"]
+_data = {
+"RESET": SubResource("Animation_46rbk"),
+"close_hand": SubResource("Animation_x8uxa")
+}
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_orc40"]
+radius = 52.0
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_gpkol"]
+radius = 16.2635
+height = 166.877
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_1glg3"]
+radius = 19.0919
+height = 138.593
+
+[node name="left_hand" type="CharacterBody2D"]
+z_index = 1
+position = Vector2(10, -2)
+scale = Vector2(-1, 1)
+motion_mode = 1
+script = ExtResource("1_pgiyp")
+
+[node name="palm_wrist" type="Polygon2D" parent="."]
+position = Vector2(-1, 0)
+color = Color(0.831373, 0.572549, 0.45098, 1)
+polygon = PackedVector2Array(-24, -24, 32, -36, 56, 16, 46, 44, -22, 29)
+
+[node name="Close_Hand_Animation" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_5rrqv")
+}
+
+[node name="fingers" type="Polygon2D" parent="."]
+position = Vector2(13, 16)
+rotation = -0.354991
+color = Color(0.831373, 0.572549, 0.45098, 1)
+offset = Vector2(-13, -16)
+polygon = PackedVector2Array(13, -10, 55, 28, 74, 79, 73, 158, 56, 157, 50, 80, 25, 41, -21, 21)
+
+[node name="thumb" type="Polygon2D" parent="."]
+position = Vector2(-1, 22)
+rotation = 0.157423
+scale = Vector2(1, 1)
+color = Color(0.831373, 0.572549, 0.45098, 1)
+offset = Vector2(-5, -27)
+polygon = PackedVector2Array(24, 17, 18, 40, -18, 49, -34, 75, -51, 83, -61, 70, -41, 36, -15, 14)
+
+[node name="squeeze_amount" type="Label" parent="."]
+offset_left = 43.0
+offset_top = -52.0
+offset_right = 83.0
+offset_bottom = -29.0
+text = "0.00"
+metadata/_edit_use_anchors_ = true
+
+[node name="left_grabber" type="Area2D" parent="."]
+position = Vector2(16, 100)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="left_grabber"]
+position = Vector2(0, -2)
+shape = SubResource("CircleShape2D_orc40")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="."]
+position = Vector2(76, 38)
+rotation = -0.785397
+shape = SubResource("CapsuleShape2D_gpkol")
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="."]
+position = Vector2(-27, 20)
+rotation = 0.785397
+shape = SubResource("CapsuleShape2D_1glg3")

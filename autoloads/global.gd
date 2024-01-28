@@ -1,5 +1,10 @@
 extends Node
 
+var is_left_dragging:bool
+var is_right_dragging:bool
+var is_left_pinching:bool
+var is_right_pinching:bool
+
 enum {EGGS,MIX,SHAPE,COOK,SAUCE,GRANNY}
 
 @export var mini_game_scores:Array[float] = [

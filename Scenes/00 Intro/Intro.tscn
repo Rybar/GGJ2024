@@ -11,3 +11,17 @@ offset_top = 960.0
 offset_right = 1853.0
 offset_bottom = 1029.0
 text = "Skip Intro"
+
+[node name="Label" type="Label" parent="."]
+offset_left = 36.0
+offset_top = 405.0
+offset_right = 1884.0
+offset_bottom = 591.0
+theme_override_font_sizes/font_size = 40
+text = "Audio plays from answering machine inviting you to participate in the \"Make ME LOOFF\" contest.
+You and grandma mishear it as \"Make Meatloaf\" and begin your Make Meatloaf Quest."
+horizontal_alignment = 1
+
+[node name="audioPlaceholderTimer" type="Timer" parent="."]
+wait_time = 20.0
+autostart = true

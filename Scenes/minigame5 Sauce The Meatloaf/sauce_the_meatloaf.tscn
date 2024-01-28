@@ -5,6 +5,11 @@
 [node name="sauce_the_meatloaf" type="Node2D"]
 script = ExtResource("1_n5umc")
 
+[node name="ColorRect" type="ColorRect" parent="."]
+offset_right = 1888.0
+offset_bottom = 1084.0
+color = Color(0.360784, 0.235294, 0.117647, 1)
+
 [node name="Label" type="Label" parent="."]
 offset_left = 34.0
 offset_top = 18.0
@@ -14,10 +19,10 @@ text = "Sauce The Meatloaf
 "
 
 [node name="nextSceneButton" type="Button" parent="."]
-offset_left = 625.0
-offset_top = 345.0
-offset_right = 671.0
-offset_bottom = 376.0
+offset_left = 1842.0
+offset_top = 1027.0
+offset_right = 1888.0
+offset_bottom = 1058.0
 text = "Next
 "
 
@@ -31,3 +36,25 @@ text = "Time Remaining: "
 [node name="minigame_timer" type="Timer" parent="TimerShow"]
 wait_time = 10.0
 autostart = true
+
+[node name="Polygon2D" type="Polygon2D" parent="."]
+position = Vector2(5, 167)
+color = Color(0.211765, 0.211765, 0.211765, 1)
+polygon = PackedVector2Array(521, 192, 458, 241, 451, 719, 519, 800, 1655, 805, 1722, 737, 1722, 273, 1659, 194)
+
+[node name="Polygon2D2" type="Polygon2D" parent="."]
+position = Vector2(83, 214)
+scale = Vector2(0.907947, 0.900489)
+color = Color(0.223529, 0.12549, 0.0352941, 1)
+polygon = PackedVector2Array(521, 192, 458, 241, 451, 719, 519, 800, 1717.06, 811.781, 1771.03, 754.034, 1783.14, 265.411, 1729.18, 195.449)
+
+[node name="Polygon2D3" type="Polygon2D" parent="."]
+position = Vector2(34, -668)
+color = Color(0.192157, 0.192157, 0.192157, 1)
+polygon = PackedVector2Array(65, 816, 110, 735, 175, 715, 224.562, 715, 263, 715, 350, 762, 400, 856, 384, 951, 341, 1009, 227, 1047, 139, 1058, 63, 978, 31, 879)
+
+[node name="Polygon2D4" type="Polygon2D" parent="."]
+position = Vector2(75.8808, -507.758)
+scale = Vector2(0.810298, 0.819242)
+color = Color(0.337255, 0.0980392, 0.0941176, 1)
+polygon = PackedVector2Array(65, 816, 110, 735, 175, 715, 263, 715, 350, 762, 400, 856, 384, 951, 341, 1009, 227, 1047, 139, 1058, 63, 978, 31, 879)
