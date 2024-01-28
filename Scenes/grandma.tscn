@@ -1,0 +1,46 @@
+[gd_scene load_steps=9 format=3 uid="uid://dkmjvlodcbtoo"]
+
+[ext_resource type="Texture2D" uid="uid://bcdwflswht4e3" path="res://raw_assets/Make_meatloaf/Granny/Feet.PNG" id="1_rdf11"]
+[ext_resource type="Texture2D" uid="uid://dcic6qqkut4x4" path="res://raw_assets/Make_meatloaf/Granny/Back arm.PNG" id="2_k5a1l"]
+[ext_resource type="Texture2D" uid="uid://3n6fiau18eci" path="res://raw_assets/Make_meatloaf/Granny/Body.PNG" id="3_pa2tf"]
+[ext_resource type="Texture2D" uid="uid://bvw6ngajkc0by" path="res://raw_assets/Make_meatloaf/Granny/Granny.PNG" id="4_jmoua"]
+[ext_resource type="Texture2D" uid="uid://jndnmbc76nb2" path="res://raw_assets/Make_meatloaf/Granny/Head.PNG" id="5_73ddj"]
+[ext_resource type="Texture2D" uid="uid://cj58p6yefdt2c" path="res://raw_assets/Make_meatloaf/Granny/Arm1.PNG" id="6_uafk7"]
+[ext_resource type="Texture2D" uid="uid://domtjh7luqglf" path="res://raw_assets/Make_meatloaf/Granny/Exp.PNG" id="7_5x8a8"]
+[ext_resource type="Texture2D" uid="uid://dsp8n7xgf443r" path="res://raw_assets/Make_meatloaf/Granny/Exp Sad.PNG" id="8_qel8i"]
+
+[node name="Grandma" type="Node2D"]
+
+[node name="Feet" type="Sprite2D" parent="."]
+position = Vector2(124, 523)
+texture = ExtResource("1_rdf11")
+
+[node name="BackArm" type="Sprite2D" parent="."]
+position = Vector2(331, 172)
+texture = ExtResource("2_k5a1l")
+
+[node name="Body" type="Sprite2D" parent="."]
+position = Vector2(104, 252)
+texture = ExtResource("3_pa2tf")
+
+[node name="Granny" type="Sprite2D" parent="."]
+position = Vector2(109, 246)
+texture = ExtResource("4_jmoua")
+
+[node name="Head" type="Sprite2D" parent="."]
+position = Vector2(515, 451)
+texture = ExtResource("5_73ddj")
+offset = Vector2(-364, -582)
+
+[node name="Arm1" type="Sprite2D" parent="."]
+position = Vector2(109, 246)
+texture = ExtResource("6_uafk7")
+
+[node name="Exp" type="Sprite2D" parent="."]
+position = Vector2(219, 18)
+texture = ExtResource("7_5x8a8")
+
+[node name="ExpSad" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(221, 18)
+texture = ExtResource("8_qel8i")

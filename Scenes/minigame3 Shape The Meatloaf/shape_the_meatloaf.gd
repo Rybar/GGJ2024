@@ -7,6 +7,7 @@ extends Node2D
 @onready var meat_bit_container = $"meat_bit container"
 
 @export var meat_count:int = 400
+
 func _ready():
 	next_scene_button.connect("pressed", _on_next_scene_button_pressed)
 	minigame_timer.connect("timeout", _on_minigame_timer_timeout)

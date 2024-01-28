@@ -1,0 +1,26 @@
+[gd_scene load_steps=4 format=3 uid="uid://dhl44xr8kd8hq"]
+
+[ext_resource type="Texture2D" uid="uid://b7ly51lfjtg5r" path="res://raw_assets/Make_meatloaf/Mix The Meatloaf/Crackers.PNG" id="1_0yxih"]
+
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_2vl08"]
+friction = 2.0
+rough = true
+absorbent = true
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_iih7b"]
+radius = 17.6777
+
+[node name="cracker-bit" type="RigidBody2D"]
+position = Vector2(-2, -3)
+input_pickable = true
+physics_material_override = SubResource("PhysicsMaterial_2vl08")
+gravity_scale = 0.0
+linear_damp = 8.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+scale = Vector2(0.4, 0.40251)
+shape = SubResource("CircleShape2D_iih7b")
+
+[node name="Crackers" type="Sprite2D" parent="."]
+position = Vector2(-1, 1)
+texture = ExtResource("1_0yxih")

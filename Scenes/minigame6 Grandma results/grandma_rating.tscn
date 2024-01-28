@@ -1,22 +1,31 @@
-[gd_scene load_steps=2 format=3 uid="uid://dw835qbckd8ws"]
+[gd_scene load_steps=4 format=3 uid="uid://dw835qbckd8ws"]
 
 [ext_resource type="Script" path="res://Scenes/minigame6 Grandma results/grandma_rating.gd" id="1_h52kc"]
+[ext_resource type="PackedScene" uid="uid://dkmjvlodcbtoo" path="res://Scenes/grandma.tscn" id="2_2l3vb"]
+[ext_resource type="Texture2D" uid="uid://d2ek5q6v0wva0" path="res://raw_assets/Make_meatloaf/Wood panel.PNG" id="2_j2xgl"]
 
 [node name="grandma_rating" type="Node2D"]
 script = ExtResource("1_h52kc")
 
+[node name="WoodPanel" type="Sprite2D" parent="."]
+position = Vector2(959, 533)
+texture = ExtResource("2_j2xgl")
+
+[node name="Grandma" parent="." instance=ExtResource("2_2l3vb")]
+position = Vector2(289, 582)
+
 [node name="Label" type="Label" parent="."]
-offset_left = 34.0
-offset_top = 18.0
-offset_right = 167.0
-offset_bottom = 41.0
+offset_left = 749.0
+offset_top = 250.0
+offset_right = 983.0
+offset_bottom = 273.0
 text = "Grandma Rates Your Meatloaf
 "
 
 [node name="nextSceneButton" type="Button" parent="."]
-offset_left = 625.0
-offset_top = 345.0
-offset_right = 671.0
-offset_bottom = 376.0
+offset_left = 1827.0
+offset_top = 1017.0
+offset_right = 1873.0
+offset_bottom = 1048.0
 text = "Next
 "

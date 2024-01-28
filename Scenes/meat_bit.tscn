@@ -1,4 +1,6 @@
-[gd_scene load_steps=3 format=3 uid="uid://36wm2abpbqn3"]
+[gd_scene load_steps=4 format=3 uid="uid://36wm2abpbqn3"]
+
+[ext_resource type="Texture2D" uid="uid://b58u10nyl18ud" path="res://raw_assets/Make_meatloaf/Mix The Meatloaf/Meatbit-large.PNG" id="1_ipqg2"]
 
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_2vl08"]
 friction = 2.0
@@ -15,11 +17,9 @@ physics_material_override = SubResource("PhysicsMaterial_2vl08")
 gravity_scale = 0.0
 linear_damp = 8.0
 
-[node name="Polygon2D" type="Polygon2D" parent="."]
-scale = Vector2(0.986908, 0.974149)
-color = Color(0.792157, 0.34902, 0.4, 1)
-polygon = PackedVector2Array(-6, -21, 1, -22, 8, -20, 14, -19, 19, -13, 16, -7, 20, -1, 20, 7, 16, 14, 11, 18, -2, 22, -8, 19, -14, 13, -20, 10, -23, -1, -20, -9, -17, -16)
-
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 scale = Vector2(0.4, 0.40251)
 shape = SubResource("CircleShape2D_iih7b")
+
+[node name="Meatbit-large" type="Sprite2D" parent="."]
+texture = ExtResource("1_ipqg2")
